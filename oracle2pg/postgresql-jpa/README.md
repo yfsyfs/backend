@@ -1,4 +1,0 @@
-这里是springboot整合jpa(hibernate实现)对接postgresql实现定时读取pg数据库中的数据然后搞事情的作业.
-但是失败了, 归咎于hibernate和pg对二进制类型数据的处理的不一致性. 具体分析详见我的博客
-
-其中本工程下面的 t_face_capture.sql 是数据库脚本

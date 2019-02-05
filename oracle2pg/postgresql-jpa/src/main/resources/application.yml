@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    username: postgres
+    password: postgres
+    url: jdbc:postgresql://localhost:5432/postgres 
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate: 
+      ddl-auto: update
+      show-sql: true
+#   database-platform: com.yfs.dialect.PgDialect
+server:
+  port: 80

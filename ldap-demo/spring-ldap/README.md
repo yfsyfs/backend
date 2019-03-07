@@ -1,0 +1,4 @@
+这里提供了spring整合ldap的demo
+请运行 UserLdapDaoTest.java 中的测试用例看效果
+
+不过，显然的，我们需要事先开启LDAP服务器

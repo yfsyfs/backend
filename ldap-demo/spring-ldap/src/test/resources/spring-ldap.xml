@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<!-- 配置数据源 -->
+	<bean id="contextSource"
+		class="org.springframework.ldap.core.support.LdapContextSource">
+		<property name="url" value="ldap://127.0.0.1:389" />
+		<property name="base" value="dc=yfs,dc=com" />
+		<property name="userDn" value="cn=Manager,dc=yfs,dc=com" />
+		<property name="password" value="secret" />
+	</bean>
+
+	<!-- 配置LdapTemplate -->
+	<bean id="ldapTemplate"
+		class="org.springframework.ldap.core.LdapTemplate">
+		<constructor-arg ref="contextSource" />
+	</bean>
+
+	<!-- 配置实体类 -->
+	<bean id="userDao" class="com.yfs.dao.UserLdapDao">
+	</bean>
+
+</beans>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<!-- 配置数据源 -->
+	<bean id="contextSource"
+		class="org.springframework.ldap.core.support.LdapContextSource">
+		<property name="url" value="ldap://10.33.31.40:7003" />
+		<property name="base" value="dc=hikvision,dc=com" />
+		<property name="userDn"
+			value="ou=acs,ou=componentaccounts,dc=platform,dc=hikvision,dc=com" />
+		<property name="password" value="bbU9gzwR" />
+		<property name="pooled" value="true" />
+	</bean>
+
+	<!-- 配置LdapTemplate -->
+	<bean id="ldapTemplate"
+		class="org.springframework.ldap.core.LdapTemplate">
+		<constructor-arg ref="contextSource" />
+	</bean>
+
+</beans>

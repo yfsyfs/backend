@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xmlns:aop="http://www.springframework.org/schema/aop"
+	   xmlns:tx="http://www.springframework.org/schema/tx"
+	   xmlns:context="http://www.springframework.org/schema/context"
+	   xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/tx
+		http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+		http://www.springframework.org/schema/aop
+		http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context.xsd"
+		default-autowire="byName" >
+	
+	<!-- 多语言加载器 -->
+	<bean id="i18nLoader" class="com.hikvision.isms.dolphin.business.i18n.lang.load.I18nPropertiesFileLoader">
+		<property name="sourcePatterns">
+			<list>
+				<!-- 多语言文件的加载路径，@componentPath为config.properties文件的内容，由核心服务在部署阶段写入 -->
+				<value>file:${@componentPath}/language/*/isfd_*.properties</value>
+			</list>
+		</property>
+	</bean>
+</beans>

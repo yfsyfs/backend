@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  
+           http://www.springframework.org/schema/beans/spring-beans-3.2.xsd  
+           http://www.springframework.org/schema/aop   
+           http://www.springframework.org/schema/aop/spring-aop-3.2.xsd  
+           http://www.springframework.org/schema/tx  
+           http://www.springframework.org/schema/tx/spring-tx-3.2.xsd  
+           http://www.springframework.org/schema/context  
+           http://www.springframework.org/schema/context/spring-context-3.2.xsd"
+	default-autowire="byName" default-lazy-init="false">
+
+	<context:property-placeholder
+		location="classpath:config.properties" />
+
+	<context:component-scan
+		base-package="service.impl" />
+
+	<!-- JMS连接工厂配置开始 -->
+	<bean id="targetConnectionFactory"
+		class="org.apache.activemq.ActiveMQConnectionFactory">
+		<!-- ActiveMQ Address -->
+		<property name="brokerURL" value="${activemq.brokerURL}" />
+		<property name="userName" value="${activemq.userName}"></property>
+		<property name="password" value="${activemq.password}"></property>
+	</bean>
+
+	<!-- <bean id="pooledConnectionFactory" class="org.apache.activemq.pool.PooledConnectionFactory"> 
+		<property name="connectionFactory" ref="targetConnectionFactory" /> <property 
+		name="maxConnections" value="${activemq.pool.maxConnections}" /> </bean> -->
+
+	<bean id="connectionFactory"
+		class="org.springframework.jms.connection.SingleConnectionFactory">
+		<property name="targetConnectionFactory"
+			ref="targetConnectionFactory" />
+	</bean>
+
+	<!-- JMS连接工厂配置结束 -->
+
+	<!-- JMS队列目的地配置开始 -->
+
+	<bean id="resultQueue"
+		class="org.apache.activemq.command.ActiveMQQueue">
+		<constructor-arg>
+			<value>${result.queue}</value>
+		</constructor-arg>
+	</bean>
+
+	<bean id="targetQueue"
+		class="org.apache.activemq.command.ActiveMQQueue">
+		<constructor-arg>
+			<value>${target.queue}</value>
+		</constructor-arg>
+	</bean>
+
+	<!-- JMS队列目的地配置结束 -->
+
+	<!-- JMS队列监听器配置开始 -->
+
+	<bean id="messageListener"
+		class="com.hikvision.nanchang.doorguardblacklist.mq.EventListener"></bean>
+
+	<!-- JMS队列监听器配置结束 -->
+
+	<!-- JMS消息监听器容器配置开始 -->
+
+	<bean id="targetQueueMessageListenerContainer"
+		class="org.springframework.jms.listener.DefaultMessageListenerContainer">
+		<property name="connectionFactory" ref="connectionFactory" />
+		<property name="destination" ref="targetQueue" />
+		<property name="messageListener" ref="messageListener" />
+	</bean>
+
+	<!-- JMS消息监听器容器配置结束 -->
+
+</beans>

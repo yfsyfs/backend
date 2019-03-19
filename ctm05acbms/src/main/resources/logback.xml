@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+	按照本模版配置可达到以下效果：
+	1、生成操作日志、系统日志和追踪日志文件,文件路径、文件名和日志格式符合日志规范
+	2、系统日志除ERROR以上日志打印两次外，其余均只打印一次，节约磁盘I/O
+	3、支持使用日志级别修改工具一键修改级别，不需重启即可生效
+
+-->
+<!-- scan="true", 不要修改。设为true支持动态调整打印级别（不需重启程序）,已提供工具统一改级别，若设false则无效 -->
+<configuration scan="true" scanPeriod="60 seconds" debug="false">
+    <!--
+    ***特别注意***, 组件封装时, 段的log.path也要配成'./logs/组件标识', 否则采集不到日志
+    -->
+    <!-- <property name="LOG_HOME" value="${catalina.base}/logs/isfd/" /> -->
+    <property name="LOG_HOME" value="d:/yichunhuangniu/" />
+    <property name="COMPONENT_ID" value="isfd" />
+    <property name="SEGMENT_ID" value="isfd" />
+
+    <!-- 控制台Appender -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd'T'HH:mm:ss.SSSXXX} %level ${COMPONENT_ID}.${SEGMENT_ID} [%thread] [%logger{50}:%line] %msg%n</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+
+    <!-- 操作日志Appender, 不要修改 -->
+    <appender name="BUS" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>${LOG_HOME}/${COMPONENT_ID}.${SEGMENT_ID}.business.log</File>
+        <rollingPolicy class="logback.rolling.log.gather.TimeBasedBackUpRollingPolicy">
+            <FileNamePattern>${LOG_HOME}/${COMPONENT_ID}.${SEGMENT_ID}.business.log.%i.zip</FileNamePattern>
+            <MinIndex>1</MinIndex>
+            <!--最多十个文件 -->
+            <MaxIndex>10</MaxIndex>
+        </rollingPolicy>
+        <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+            <MaxFileSize>25MB</MaxFileSize>
+        </triggeringPolicy>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd'T'HH:mm:ss.SSSXXX} - %msg%n</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+
+    <logger name="businessLog" level="INFO" additivity="false">
+        <appender-ref ref="BUS" />
+        <appender-ref ref="STDOUT" />
+    </logger>
+    <!-- 操作日志Appender,   结束 -->
+
+    <!-- 追踪日志Appender, 不要修改 -->
+    <appender name="DTS" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>${LOG_HOME}/${COMPONENT_ID}.${SEGMENT_ID}.dts.log</File>
+        <rollingPolicy class="logback.rolling.log.gather.TimeBasedBackUpRollingPolicy">
+            <!--日志文件输出的文件名 -->
+            <FileNamePattern>${LOG_HOME}/${COMPONENT_ID}.${SEGMENT_ID}.dts.log.%i.zip</FileNamePattern>
+            <MinIndex>1</MinIndex>
+            <!--最多十个文件 -->
+            <MaxIndex>10</MaxIndex>
+        </rollingPolicy>
+        <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+            <MaxFileSize>25MB</MaxFileSize>
+        </triggeringPolicy>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd'T'HH:mm:ss.SSSXXX} [%thread] [%logger{50}:%line] - %msg%n</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+
+    <logger name="com.hikvision.swdf.impl.TraceRecordGenerator" level="INFO" additivity="false">
+        <appender-ref ref="DTS" />
+        <appender-ref ref="STDOUT" />
+    </logger>
+    <!-- 追踪日志Appender,  结束 -->
+
+    <!-- 系统日志文件打印配置     开始 -->
+    <!--
+    如要增加自定义模块日志打印配置：
+        appender名称格式为：FILE-debug-模块名
+        文件名格式：${COMPONENT_ID}.${SEGMENT_ID}.模块名.debug.log
+    日志打印文件越多, 越影响磁盘I/O效率, 造成程度卡顿, 尽量按标准配置打印
+    -->
+    <!-- 所有级别(TRACE及以上)的日志输出配置, 所有级别打印在*.debug.log中, 文件名用debug表示调试用, 便于理解 -->
+    <appender name="FILE-debug" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>TRACE</level>
+        </filter>
+        <File>${LOG_HOME}/${COMPONENT_ID}.${SEGMENT_ID}.debug.log</File>
+        <rollingPolicy class="logback.rolling.log.gather.TimeBasedBackUpRollingPolicy">
+            <FileNamePattern>${LOG_HOME}/${COMPONENT_ID}.${SEGMENT_ID}.debug.log.%i.zip
+            </FileNamePattern>
+            <MinIndex>1</MinIndex>
+            <MaxIndex>10</MaxIndex>
+        </rollingPolicy>
+        <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+            <!-- debug文件大小设置为100M, 再压缩 -->
+            <MaxFileSize>100MB</MaxFileSize>
+        </triggeringPolicy>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd'T'HH:mm:ss.SSSXXX} %level ${COMPONENT_ID}.${SEGMENT_ID} [%thread] [%logger{50}:%line] %msg%n</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+
+    <!-- 错误日志输出配置, error及以上日志单独再打印一个*.error.log, 防止重要信息被覆盖-->
+    <appender name="FILE-error" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>ERROR</level>
+        </filter>
+        <File>${LOG_HOME}/${COMPONENT_ID}.${SEGMENT_ID}.error.log</File>
+        <rollingPolicy class="logback.rolling.log.gather.TimeBasedBackUpRollingPolicy">
+            <FileNamePattern>${LOG_HOME}/${COMPONENT_ID}.${SEGMENT_ID}.error.log.%i.zip
+            </FileNamePattern>
+            <MinIndex>1</MinIndex>
+            <MaxIndex>10</MaxIndex>
+        </rollingPolicy>
+        <triggeringPolicy
+                class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+            <MaxFileSize>25MB</MaxFileSize>
+        </triggeringPolicy>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd'T'HH:mm:ss.SSSXXX} %level ${COMPONENT_ID}.${SEGMENT_ID} [%thread] [%logger{50}:%line] %msg%n</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+
+    <!-- ef框架sql默认是INFO级别, 打印级别改成WARN, 防止sql频繁打印 -->
+    <logger name="GeeQuery" level="WARN"></logger>
+
+    <!-- 出厂默认输出级别INFO, 排查问题时, 可以通过工具切换为TRACE -->
+    <!-- 自定义模块日志打印 添加在后面 -->
+    <logger name="com.hikvision" level="DEBUG" additivity="false">
+        <appender-ref ref="FILE-debug" />
+        <appender-ref ref="FILE-error" />
+        <appender-ref ref="STDOUT" />
+    </logger>
+
+    <!-- SPRING等框架类代码日志打印, 输出到OTHER文件中, 出厂默认WARN以上 -->
+    <appender name="OTHER" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>WARN</level>
+        </filter>
+        <File>${LOG_HOME}/${COMPONENT_ID}.${SEGMENT_ID}.other.log</File>
+        <rollingPolicy class="logback.rolling.log.gather.TimeBasedBackUpRollingPolicy">
+            <FileNamePattern>${LOG_HOME}/${COMPONENT_ID}.${SEGMENT_ID}.other.%i.log.zip</FileNamePattern>
+            <MinIndex>1</MinIndex>
+            <!--最多十个文件 -->
+            <MaxIndex>10</MaxIndex>
+        </rollingPolicy>
+        <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+            <MaxFileSize>25MB</MaxFileSize>
+        </triggeringPolicy>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd'T'HH:mm:ss.SSSXXX} %level ${COMPONENT_ID}.${SEGMENT_ID} [%thread] [%logger{50}:%line] - %msg%n</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+    <!-- 项目中有其他重要程度不高、打印频繁的日志来源,按下面方式配置高级别 -->
+    <logger name="org.apache.zookeeper.ClientCnxn" level="ERROR" />
+    <logger name="org.springframework.boot" level="WARN" />
+    <logger name="org.springframework.boot.web.filter" level="ERROR" />
+
+    <root level="WARN">
+        <appender-ref ref="OTHER" />
+    </root>
+    <!-- 系统日志文件打印配置  结束 -->
+</configuration>

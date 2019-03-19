@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:task="http://www.springframework.org/schema/task"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+                     http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+                     http://www.springframework.org/schema/context
+                     http://www.springframework.org/schema/context/spring-context-4.0.xsd
+                     http://www.springframework.org/schema/aop
+                     http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+                     http://www.springframework.org/schema/mvc
+  					 http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
+  					 http://www.springframework.org/schema/task
+					 http://www.springframework.org/schema/task/spring-task.xsd">
+
+	<!-- 注释扫描Controller -->
+	<!-- <context:component-scan base-package="com.hikvision.isms.dolphin.business.common.action"/> -->
+	<context:component-scan
+		base-package="com.hikvision.nanchang.doorguardblacklist.controller.api,com.hikvision.nanchang.doorguardblacklist.config"></context:component-scan>
+	
+	<!-- 定义系统日志切面，必须定义在此配置文件中，否则spring mvc切面拦截功能会失效 -->
+	<aop:aspectj-autoproxy proxy-target-class="true" />
+	<!-- 使用 Swagger Restful API文档时，添加此注解 -->
+	<mvc:default-servlet-handler />
+	<mvc:annotation-driven>
+		<mvc:message-converters>
+			<ref bean="mappingJacksonHttpMessageConverter" />
+		</mvc:message-converters>
+	</mvc:annotation-driven>
+
+	<!--避免IE执行AJAX时，返回JSON出现下载文件 -->
+	<bean id="mappingJacksonHttpMessageConverter"
+		class="com.hikvision.isms.dolphin.business.web.serialize.converter.DolphinMappingJackson2HttpMessageConverter">
+		<property name="supportedMediaTypes">
+			<list>
+				<value>application/json;charset=UTF-8</value>
+				<value>text/html;charset=UTF-8</value>
+			</list>
+		</property>
+	</bean>
+	<bean
+		class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
+		<property name="messageConverters">
+			<list>
+				<ref bean="mappingJacksonHttpMessageConverter" /> <!-- JSON转换器 -->
+			</list>
+		</property>
+	</bean>
+
+	<!-- 拦截器 配置多个将会顺序执行 -->
+	<mvc:interceptors>
+		<!-- <bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor"> 
+			<property name="paramName" value="language" /> </bean> -->
+		<!-- 基本拦截器，设置Response Head -->
+		<bean
+			class="com.hikvision.isms.dolphin.business.web.interceptor.HttpServletBaseInterceptor" />
+		<!-- 用户信息解析拦截器 -->
+		<bean
+			class="com.hikvision.isms.dolphin.context.login.interceptor.LoginHandlerInterceptor"
+			p:casAssertionName="_const_cas_assertion_" />
+		<!-- 序列化策略拦截器 -->
+		<bean
+			class="com.hikvision.isms.dolphin.business.i18n.lang.interceptor.SerializePolicyInterceptor" />
+		<!-- 多语言拦截器，依赖用户信息解析拦截器的解析结果 -->
+		<bean
+			class="com.hikvision.isms.dolphin.business.i18n.lang.interceptor.LanguageHandlerInterceptor" />
+	</mvc:interceptors>
+
+	<!-- <bean id="propertyConfigurer" class="com.hikvision.isms.dolphin.context.config.DolphinPropertyConfigurer 
+		"> <property name="fileEncoding" value="utf-8" /> <property name="errorCode" 
+		value="0x06c0100f" /> <property name="componentId" value="isfd" /> <property 
+		name="db" value="isfddb" /> <property name="queue" value="isfdqueue" /> <property 
+		name="segment" value="isfd" /> <property name="cache" value="isfdcache" /> 
+		<property name="ldap" value="isfdldap" /> </bean> -->
+
+	<!-- 上传文件处理器 -->
+	<bean id="multipartResolver"
+		class="com.hikvision.isms.dolphin.business.web.multipart.DolphinMultipartResolver">
+		<!-- 文件的编码类型 -->
+		<property name="defaultEncoding" value="UTF-8" />
+		<!--上传文件大小，以字节数表示 1KB=1024 -->
+		<property name="maxUploadSize" value="52428800" />
+		<!--上传执行的错误码 -->
+		<property name="ulCode" value="0x06c0100f" />
+		<!--上传执行的错误信息 -->
+		<property name="ulMsg" value="file upload failure" />
+		<!--上传执行的错误信息前端提示 -->
+		<property name="ulUiMsg" value="rtree.region.file_read_error" />
+		<!--文件超过大小限制错误码 -->
+		<property name="fsleCode" value="0x06c0100c" />
+		<!--文件超过大小限制错误信息 -->
+		<property name="fsleMsg"
+			value="The file exceeds the size limit" />
+		<!--文件超过大小限制错误信息前端提示 -->
+		<property name="fsleUiMsg"
+			value="rtree.region.file_too_large" />
+		<!--非法文件类型错误码 -->
+		<property name="iftCode" value="0x06c0100b" />
+		<!--非法文件类型错误信息 -->
+		<property name="iftMsg" value="Illegal file type" />
+		<!--非法文件类型错误信息前端提示 -->
+		<property name="iftUiMsg"
+			value="rtree.region.file_type_error" />
+	</bean>
+
+	<!-- 未知异常处理器 -->
+	<!-- errorcode未知异常的错误码，msg未知异常信息，uiMsg未知异常的UI界面提示（多语言Key） -->
+	<bean
+		class="com.hikvision.isms.dolphin.business.web.UnknownExceptionResolver"
+		p:errorcode="0x06c00001" p:msg="unknown error"
+		p:uiMsg="isfd.isfd.unknown_error" />
+
+</beans>

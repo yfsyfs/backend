@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="
+		http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<!--queue notify begin-->
+ 	<bean id="queueSpringNotifyConnectionFactory" class="com.hikvision.notify.spring.factory.SpringNotifyConnectionFactory">
+		<property name="brokerUrl" value="${queue.notify.ipport}"/>
+		<property name="clientId" value="${bic.notify.clientId}" />
+		<property name="userName" value="${queue.notify.username}" />
+		<property name="password" value="${queue.notify.password}" />
+	</bean>
+	
+	<!-- 核心服务创建生产工厂并注入到Spring容器中 -->
+	<bean id="springNotifyConnectionFactory" class="com.hikvision.notify.spring.factory.SpringNotifyConnectionFactory">
+		<property name="brokerUrl" value="${bic.notify.ipport}" />
+		<property name="clientId" value="${bic.notify.clientId}" />
+		<property name="userName" value="${bic.notify.username}" />
+		<property name="password" value="${bic.notify.password}" />
+	</bean>
+	
+	<!-- 配置多语言资源包消费者--> 
+	<bean class="com.hikvision.isms.dolphin.business.i18n.lang.notify.comsumer.LanguageImportAgentNotifyConsumer">
+		<property name="errCode" value="0x03b01053"/>更新前端多语言包失败的错误码
+	</bean>
+	
+	<!-- 配置资源包更新通知的分发器-->
+	<bean class="com.hikvision.isms.dolphin.data.notify.agent.distributor.ResImportAgentNotifyDistributor" init-method="init"
+	      p:destionName="${@agent.agentNo}.${component.id}.${segment.id}.topic.${isfd.@index}" 
+	      p:isTopic="true" p:connErrCode="0x03b01054" p:receiveErrCode="0x03b01055" />
+	
+	<!-- 通知发送者 -->
+	<bean id="notifyProducer" class="com.hikvision.notify.spring.producer.DefaultSpringNotifyProducer" destroy-method="stop">
+		<property name="isPersistent" value="false"></property>
+		<property name="springNotifyConnectionFactory" ref="queueSpringNotifyConnectionFactory"></property>
+	</bean>
+	
+	<!-- 核心服务人员变更通知转发器 -->
+	<bean id="bicPersonNotifyDistributor" class="com.hikvision.isms.dolphin.data.notify.distributor.BicPersonNotifyDistributor" destroy-method="stop">
+		<!-- destionName：主题或者队列名称 isTopic：是否是主题，不是主题则是队列 isPersistent：是否是持久消费者 springNotifyConnectionFactory：注入连接工厂 -->
+		<property name="destionName" value="bic.ldap.topic.person_change"></property>
+		<property name="isTopic" value="true"></property>
+		<property name="isPersistent" value="false"></property>
+		<property name="springNotifyConnectionFactory" ref="springNotifyConnectionFactory"></property>
+	</bean>
+	
+	<!-- 核心服务组织机构变更通知转发器 -->
+	<bean id="bicOrgNotifyDistributor" class="com.hikvision.isms.dolphin.data.notify.distributor.BicOrgNotifyDistributor" destroy-method="stop">
+		<!-- destionName：主题或者队列名称 isTopic：是否是主题，不是主题则是队列 isPersistent：是否是持久消费者 springNotifyConnectionFactory：注入连接工厂 -->
+		<property name="destionName" value="bic.ldap.topic.org_change"></property>
+		<property name="isTopic" value="true"></property>
+		<property name="isPersistent" value="false"></property>
+		<property name="springNotifyConnectionFactory" ref="springNotifyConnectionFactory"></property>
+	</bean>
+	
+	<!-- 授权信息变更通知转发器 -->
+	<bean id="bicLicenseNotifyDistributor" class="com.hikvision.isms.dolphin.data.notify.distributor.BicLicenseNotifyDistributor" destroy-method="stop">
+		<!-- destionName：主题或者队列名称 isTopic：是否是主题，不是主题则是队列 isPersistent：是否是持久消费者 springNotifyConnectionFactory：注入连接工厂 -->
+		<property name="destionName" value="bic.license.topic.license_change"></property>
+		<property name="isTopic" value="true"></property>
+		<property name="isPersistent" value="false"></property>
+		<property name="springNotifyConnectionFactory" ref="springNotifyConnectionFactory"></property>
+	</bean>
+	
+	<!-- 服务信息变更通知转发器 -->
+	<bean id="bicServiceNotifyDistributor" class="com.hikvision.isms.dolphin.data.notify.distributor.BicServiceNotifyDistributor" destroy-method="stop">
+		<!-- destionName：主题或者队列名称 isTopic：是否是主题，不是主题则是队列 isPersistent：是否是持久消费者 springNotifyConnectionFactory：注入连接工厂 -->
+		<property name="destionName" value="bic.core.topic.service_change"></property>
+		<property name="isTopic" value="true"></property>
+		<property name="isPersistent" value="false"></property>
+		<property name="springNotifyConnectionFactory" ref="springNotifyConnectionFactory"></property>
+	</bean>
+	
+	<!-- 多线路变更通知 -->
+    <bean id="bicNetDomainNotifyDistributor" class="com.hikvision.isms.dolphin.data.notify.distributor.BicNetDomainNotifyDistributor" destroy-method="stop">
+       <!--  destionName：主题或者队列名称 isTopic：是否是主题，不是主题则是队列 isPersistent：是否是持久消费者 springNotifyConnectionFactory：注入连接工厂 -->
+        <property name="destionName" value="bic.core.topic.netdomain_change"></property>
+        <property name="isTopic" value="true"></property>
+        <property name="isPersistent" value="false"></property>
+        <property name="springNotifyConnectionFactory" ref="springNotifyConnectionFactory"></property>
+    </bean>
+	
+	<bean id="notifyApplicationListener" class="com.hikvision.isms.dolphin.data.notify.NotifyApplicationListener"/>
+</beans>

@@ -19,3 +19,5 @@ spring-ldap
 值得指出的是, 测试的时候读取的配置文件就是 src/test/resources 目录下面的配置文件
 
 而跑工程的时候读取的配置文件就是 src/main/resources 目录下面的配置文件
+
+而且通过这个项目，我知道了ajax请求文件下载的时候，ajax并不能真正下载文件，而只能采用新增dom提交表单或者直接window.location.href跳转到下载action去两种方法.

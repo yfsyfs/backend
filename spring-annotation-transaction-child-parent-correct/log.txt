@@ -1,0 +1,382 @@
+DEBUG - Adding PropertySource 'systemProperties' with lowest search precedence
+DEBUG - Adding PropertySource 'systemEnvironment' with lowest search precedence
+DEBUG - Initialized StandardEnvironment with PropertySources [MapPropertySource@116211441 {name='systemProperties', properties={java.runtime.name=Java(TM) SE Runtime Environment, sun.boot.library.path=D:\JDK\jdk8\jdk\jre\bin, java.vm.version=25.202-b08, java.vm.vendor=Oracle Corporation, java.vendor.url=http://java.oracle.com/, path.separator=;, java.vm.name=Java HotSpot(TM) 64-Bit Server VM, file.encoding.pkg=sun.io, user.country=CN, user.script=, sun.java.launcher=SUN_STANDARD, sun.os.patch.level=, java.vm.specification.name=Java Virtual Machine Specification, user.dir=D:\learningjava\spring-annotation-transaction-child-parent-correct, java.runtime.version=1.8.0_202-b08, java.awt.graphicsenv=sun.awt.Win32GraphicsEnvironment, java.endorsed.dirs=D:\JDK\jdk8\jdk\jre\lib\endorsed, os.arch=amd64, java.io.tmpdir=C:\Users\yfs\AppData\Local\Temp\, line.separator=
+, java.vm.specification.vendor=Oracle Corporation, user.variant=, os.name=Windows 10, sun.jnu.encoding=GBK, java.library.path=D:\JDK\jdk8\jdk\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:/JDK/jdk8/jdk/bin/../jre/bin/server;D:/JDK/jdk8/jdk/bin/../jre/bin;D:/JDK/jdk8/jdk/bin/../jre/lib/amd64;D:\app\yfs\product\11.2.0\dbhome_1\bin;D:\JDK\jdk8\jdk\bin;D:\JDK\jdk8\jdk\jre\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Users\yfs\Desktop\开发;D:\node\;D:\apache-maven-3.3.3\bin;D:\tortoisegit\bin;D:\mongodb\bin;D:\mingw\bin;D:\mysql-5.7.23-winx64\bin;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\DTS\Binn\;D:\TortoiseSVN\bin;C:\Users\yfs\AppData\Local\Microsoft\WindowsApps;;D:\WebStorm\bin;;C:\Users\yfs\AppData\Roaming\npm;D:\eclipse;;., java.specification.name=Java Platform API Specification, java.class.version=52.0, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, os.version=10.0, user.home=C:\Users\yfs, user.timezone=, java.awt.printerjob=sun.awt.windows.WPrinterJob, file.encoding=UTF-8, java.specification.version=1.8, java.class.path=D:\JDK\jdk8\jdk\jre\lib\resources.jar;D:\JDK\jdk8\jdk\jre\lib\rt.jar;D:\JDK\jdk8\jdk\jre\lib\jsse.jar;D:\JDK\jdk8\jdk\jre\lib\jce.jar;D:\JDK\jdk8\jdk\jre\lib\charsets.jar;D:\JDK\jdk8\jdk\jre\lib\jfr.jar;D:\JDK\jdk8\jdk\jre\lib\ext\access-bridge-64.jar;D:\JDK\jdk8\jdk\jre\lib\ext\cldrdata.jar;D:\JDK\jdk8\jdk\jre\lib\ext\dnsns.jar;D:\JDK\jdk8\jdk\jre\lib\ext\jaccess.jar;D:\JDK\jdk8\jdk\jre\lib\ext\jfxrt.jar;D:\JDK\jdk8\jdk\jre\lib\ext\localedata.jar;D:\JDK\jdk8\jdk\jre\lib\ext\nashorn.jar;D:\JDK\jdk8\jdk\jre\lib\ext\sunec.jar;D:\JDK\jdk8\jdk\jre\lib\ext\sunjce_provider.jar;D:\JDK\jdk8\jdk\jre\lib\ext\sunmscapi.jar;D:\JDK\jdk8\jdk\jre\lib\ext\sunpkcs11.jar;D:\JDK\jdk8\jdk\jre\lib\ext\zipfs.jar;D:\learningjava\spring-annotation-transaction-child-parent-correct\target\classes;D:\apache-maven-3.3.9\repository\org\springframework\spring-context\4.3.12.RELEASE\spring-context-4.3.12.RELEASE.jar;D:\apache-maven-3.3.9\repository\org\springframework\spring-aop\4.3.12.RELEASE\spring-aop-4.3.12.RELEASE.jar;D:\apache-maven-3.3.9\repository\org\springframework\spring-beans\4.3.12.RELEASE\spring-beans-4.3.12.RELEASE.jar;D:\apache-maven-3.3.9\repository\org\springframework\spring-core\4.3.12.RELEASE\spring-core-4.3.12.RELEASE.jar;D:\apache-maven-3.3.9\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;D:\apache-maven-3.3.9\repository\org\springframework\spring-expression\4.3.12.RELEASE\spring-expression-4.3.12.RELEASE.jar;D:\apache-maven-3.3.9\repository\com\mchange\c3p0\0.9.2\c3p0-0.9.2.jar;D:\apache-maven-3.3.9\repository\com\mchange\mchange-commons-java\0.2.3.3\mchange-commons-java-0.2.3.3.jar;D:\apache-maven-3.3.9\repository\mysql\mysql-connector-java\5.1.44\mysql-connector-java-5.1.44.jar;D:\apache-maven-3.3.9\repository\org\springframework\spring-jdbc\4.3.24.RELEASE\spring-jdbc-4.3.24.RELEASE.jar;D:\apache-maven-3.3.9\repository\org\springframework\spring-tx\4.3.24.RELEASE\spring-tx-4.3.24.RELEASE.jar;D:\apache-maven-3.3.9\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar;D:\apache-maven-3.3.9\repository\org\springframework\spring-aspects\4.3.12.RELEASE\spring-aspects-4.3.12.RELEASE.jar;D:\apache-maven-3.3.9\repository\org\aspectj\aspectjweaver\1.8.9\aspectjweaver-1.8.9.jar, user.name=yfs, java.vm.specification.version=1.8, sun.java.command=com.yfs.App, java.home=D:\JDK\jdk8\jdk\jre, sun.arch.data.model=64, user.language=zh, java.specification.vendor=Oracle Corporation, awt.toolkit=sun.awt.windows.WToolkit, java.vm.info=mixed mode, java.version=1.8.0_202, java.ext.dirs=D:\JDK\jdk8\jdk\jre\lib\ext;C:\Windows\Sun\Java\lib\ext, sun.boot.class.path=D:\JDK\jdk8\jdk\jre\lib\resources.jar;D:\JDK\jdk8\jdk\jre\lib\rt.jar;D:\JDK\jdk8\jdk\jre\lib\sunrsasign.jar;D:\JDK\jdk8\jdk\jre\lib\jsse.jar;D:\JDK\jdk8\jdk\jre\lib\jce.jar;D:\JDK\jdk8\jdk\jre\lib\charsets.jar;D:\JDK\jdk8\jdk\jre\lib\jfr.jar;D:\JDK\jdk8\jdk\jre\classes, java.vendor=Oracle Corporation, file.separator=\, java.vendor.url.bug=http://bugreport.sun.com/bugreport/, sun.io.unicode.encoding=UnicodeLittle, sun.cpu.endian=little, sun.desktop=windows, sun.cpu.isalist=amd64}}, SystemEnvironmentPropertySource@607635164 {name='systemEnvironment', properties={configsetroot=C:\Windows\ConfigSetRoot, USERDOMAIN_ROAMINGPROFILE=LAPTOP-DSJV96RJ, PROCESSOR_LEVEL=6, VS140COMNTOOLS=D:\vs2015\Common7\Tools\, SESSIONNAME=Console, ALLUSERSPROFILE=C:\ProgramData, PROCESSOR_ARCHITECTURE=AMD64, TNS_ADMIN=D:\app\yfs\product\11.2.0\dbhome_1\NETWORK\ADMIN, PSModulePath=C:\Program Files\WindowsPowerShell\Modules;C:\Windows\system32\WindowsPowerShell\v1.0\Modules, SystemDrive=C:, VS100COMNTOOLS=D:\Microsoft Visual Studio 10.0\Common7\Tools\, MAVEN_HOME=D:\apache-maven-3.3.3, MOZ_PLUGIN_PATH=D:\Foxit Reader\plugins\, USERNAME=yfs, ProgramFiles(x86)=C:\Program Files (x86), FPS_BROWSER_USER_PROFILE_STRING=Default, PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC, DriverData=C:\Windows\System32\Drivers\DriverData, ProgramData=C:\ProgramData, ProgramW6432=C:\Program Files, HOMEPATH=\Users\yfs, PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 158 Stepping 10, GenuineIntel, VSSDK140Install=D:\vs2015\VSSDK\, ProgramFiles=C:\Program Files, PUBLIC=C:\Users\Public, windir=C:\Windows, =::=::\, LOCALAPPDATA=C:\Users\yfs\AppData\Local, USERDOMAIN=LAPTOP-DSJV96RJ, FPS_BROWSER_APP_PROFILE_STRING=Internet Explorer, LOGONSERVER=\\LAPTOP-DSJV96RJ, JAVA_HOME=D:\JDK\jdk8\jdk, WebStorm=D:\WebStorm\bin;, OneDrive=C:\Users\yfs\OneDrive, APPDATA=C:\Users\yfs\AppData\Roaming, CommonProgramFiles=C:\Program Files\Common Files, Path=D:/JDK/jdk8/jdk/bin/../jre/bin/server;D:/JDK/jdk8/jdk/bin/../jre/bin;D:/JDK/jdk8/jdk/bin/../jre/lib/amd64;D:\app\yfs\product\11.2.0\dbhome_1\bin;D:\JDK\jdk8\jdk\bin;D:\JDK\jdk8\jdk\jre\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Users\yfs\Desktop\开发;D:\node\;D:\apache-maven-3.3.3\bin;D:\tortoisegit\bin;D:\mongodb\bin;D:\mingw\bin;D:\mysql-5.7.23-winx64\bin;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\DTS\Binn\;D:\TortoiseSVN\bin;C:\Users\yfs\AppData\Local\Microsoft\WindowsApps;;D:\WebStorm\bin;;C:\Users\yfs\AppData\Roaming\npm;D:\eclipse;, OS=Windows_NT, COMPUTERNAME=LAPTOP-DSJV96RJ, PROCESSOR_REVISION=9e0a, CLASSPATH=.;D:\JDK\jdk8\jdk\lib;D:\JDK\jdk8\jdk\lib\tools.jar, CommonProgramW6432=C:\Program Files\Common Files, NLS_LANG=AMERICAN_AMERICA.ZHS16GBK, ComSpec=C:\Windows\system32\cmd.exe, SystemRoot=C:\Windows, TEMP=C:\Users\yfs\AppData\Local\Temp, HOMEDRIVE=C:, USERPROFILE=C:\Users\yfs, TMP=C:\Users\yfs\AppData\Local\Temp, CommonProgramFiles(x86)=C:\Program Files (x86)\Common Files, NUMBER_OF_PROCESSORS=12}}]
+INFO - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@2077d4de: startup date [Tue Jun 18 16:03:14 CST 2019]; root of context hierarchy
+DEBUG - Bean factory for org.springframework.context.annotation.AnnotationConfigApplicationContext@2077d4de: org.springframework.beans.factory.support.DefaultListableBeanFactory@3796751b: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.event.internalEventListenerProcessor,org.springframework.context.event.internalEventListenerFactory,mainConfig]; root of factory hierarchy
+DEBUG - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+DEBUG - Creating instance of bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+DEBUG - Eagerly caching bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor' to allow for resolving potential circular references
+DEBUG - Finished creating instance of bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+DEBUG - Adding PropertySource 'class path resource [db.properties]' with lowest search precedence
+DEBUG - Resolved classpath location [com/yfs/] to resources [URL [file:/D:/learningjava/spring-annotation-transaction-child-parent-correct/target/classes/com/yfs/]]
+DEBUG - Looking for matching resources in directory tree [D:\learningjava\spring-annotation-transaction-child-parent-correct\target\classes\com\yfs]
+DEBUG - Searching directory [D:\learningjava\spring-annotation-transaction-child-parent-correct\target\classes\com\yfs] for files matching pattern [D:/learningjava/spring-annotation-transaction-child-parent-correct/target/classes/com/yfs/**/*.class]
+DEBUG - Searching directory [D:\learningjava\spring-annotation-transaction-child-parent-correct\target\classes\com\yfs\config] for files matching pattern [D:/learningjava/spring-annotation-transaction-child-parent-correct/target/classes/com/yfs/**/*.class]
+DEBUG - Searching directory [D:\learningjava\spring-annotation-transaction-child-parent-correct\target\classes\com\yfs\dao] for files matching pattern [D:/learningjava/spring-annotation-transaction-child-parent-correct/target/classes/com/yfs/**/*.class]
+DEBUG - Searching directory [D:\learningjava\spring-annotation-transaction-child-parent-correct\target\classes\com\yfs\service] for files matching pattern [D:/learningjava/spring-annotation-transaction-child-parent-correct/target/classes/com/yfs/**/*.class]
+DEBUG - Resolved location pattern [classpath*:com/yfs/**/*.class] to resources [file [D:\learningjava\spring-annotation-transaction-child-parent-correct\target\classes\com\yfs\App.class], file [D:\learningjava\spring-annotation-transaction-child-parent-correct\target\classes\com\yfs\config\DBConfig.class], file [D:\learningjava\spring-annotation-transaction-child-parent-correct\target\classes\com\yfs\config\MainConfig.class], file [D:\learningjava\spring-annotation-transaction-child-parent-correct\target\classes\com\yfs\dao\UserDao.class], file [D:\learningjava\spring-annotation-transaction-child-parent-correct\target\classes\com\yfs\service\UserService.class]]
+DEBUG - Identified candidate component class: file [D:\learningjava\spring-annotation-transaction-child-parent-correct\target\classes\com\yfs\config\DBConfig.class]
+DEBUG - Identified candidate component class: file [D:\learningjava\spring-annotation-transaction-child-parent-correct\target\classes\com\yfs\dao\UserDao.class]
+DEBUG - Identified candidate component class: file [D:\learningjava\spring-annotation-transaction-child-parent-correct\target\classes\com\yfs\service\UserService.class]
+DEBUG - Registered bean definition for imported class 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration'
+DEBUG - Registering bean definition for @Bean method org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration.org.springframework.transaction.config.internalTransactionAdvisor()
+DEBUG - Registering bean definition for @Bean method org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration.transactionAttributeSource()
+DEBUG - Registering bean definition for @Bean method org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration.transactionInterceptor()
+DEBUG - Registering bean definition for @Bean method org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration.org.springframework.transaction.config.internalTransactionalEventListenerFactory()
+DEBUG - Registering bean definition for @Bean method com.yfs.config.MainConfig.dataSource()
+DEBUG - Registering bean definition for @Bean method com.yfs.config.MainConfig.jdbcTemplate()
+DEBUG - Registering bean definition for @Bean method com.yfs.config.MainConfig.platformTransactionManager()
+DEBUG - Successfully enhanced com.yfs.config.MainConfig; enhanced class name is: com.yfs.config.MainConfig$$EnhancerBySpringCGLIB$$d330e5b4
+DEBUG - Replacing bean definition 'mainConfig' existing class 'com.yfs.config.MainConfig' with enhanced class 'com.yfs.config.MainConfig$$EnhancerBySpringCGLIB$$d330e5b4'
+DEBUG - Successfully enhanced org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration; enhanced class name is: org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e529bafd
+DEBUG - Replacing bean definition 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' existing class 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' with enhanced class 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e529bafd'
+DEBUG - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+DEBUG - Creating instance of bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+DEBUG - Eagerly caching bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor' to allow for resolving potential circular references
+DEBUG - Finished creating instance of bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+DEBUG - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+DEBUG - Creating instance of bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+DEBUG - Eagerly caching bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor' to allow for resolving potential circular references
+DEBUG - Finished creating instance of bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+DEBUG - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+DEBUG - Creating instance of bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+DEBUG - Eagerly caching bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor' to allow for resolving potential circular references
+DEBUG - Finished creating instance of bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+DEBUG - Creating shared instance of singleton bean 'org.springframework.aop.config.internalAutoProxyCreator'
+DEBUG - Creating instance of bean 'org.springframework.aop.config.internalAutoProxyCreator'
+DEBUG - Eagerly caching bean 'org.springframework.aop.config.internalAutoProxyCreator' to allow for resolving potential circular references
+DEBUG - Finished creating instance of bean 'org.springframework.aop.config.internalAutoProxyCreator'
+DEBUG - Unable to locate MessageSource with name 'messageSource': using default [org.springframework.context.support.DelegatingMessageSource@6f3b5d16]
+DEBUG - Unable to locate ApplicationEventMulticaster with name 'applicationEventMulticaster': using default [org.springframework.context.event.SimpleApplicationEventMulticaster@f2f2cc1]
+DEBUG - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@3796751b: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.event.internalEventListenerProcessor,org.springframework.context.event.internalEventListenerFactory,mainConfig,DBConfig,userDao,userService,org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration,org.springframework.transaction.config.internalTransactionAdvisor,transactionAttributeSource,transactionInterceptor,org.springframework.transaction.config.internalTransactionalEventListenerFactory,dataSource,jdbcTemplate,platformTransactionManager,org.springframework.aop.config.internalAutoProxyCreator]; root of factory hierarchy
+DEBUG - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+DEBUG - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+DEBUG - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+DEBUG - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+DEBUG - Creating shared instance of singleton bean 'org.springframework.context.event.internalEventListenerProcessor'
+DEBUG - Creating instance of bean 'org.springframework.context.event.internalEventListenerProcessor'
+DEBUG - Creating shared instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG - Creating instance of bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG - Creating shared instance of singleton bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration'
+DEBUG - Creating instance of bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration'
+DEBUG - Skipping currently created advisor 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG - Registered injected element on class [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e529bafd]: AutowiredMethodElement for void org.springframework.transaction.annotation.AbstractTransactionManagementConfiguration.setConfigurers(java.util.Collection)
+DEBUG - Eagerly caching bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' to allow for resolving potential circular references
+DEBUG - Processing injected element of bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': AutowiredMethodElement for void org.springframework.transaction.annotation.AbstractTransactionManagementConfiguration.setConfigurers(java.util.Collection)
+DEBUG - Returning cached instance of singleton bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importRegistry'
+DEBUG - Skipping currently created advisor 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG - Skipping currently created advisor 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG - Finished creating instance of bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration'
+DEBUG - Creating shared instance of singleton bean 'transactionAttributeSource'
+DEBUG - Creating instance of bean 'transactionAttributeSource'
+DEBUG - Skipping currently created advisor 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG - Returning cached instance of singleton bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration'
+DEBUG - Eagerly caching bean 'transactionAttributeSource' to allow for resolving potential circular references
+DEBUG - Skipping currently created advisor 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG - Skipping currently created advisor 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG - Finished creating instance of bean 'transactionAttributeSource'
+DEBUG - Creating shared instance of singleton bean 'transactionInterceptor'
+DEBUG - Creating instance of bean 'transactionInterceptor'
+DEBUG - Returning cached instance of singleton bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration'
+DEBUG - Returning cached instance of singleton bean 'transactionAttributeSource'
+DEBUG - Eagerly caching bean 'transactionInterceptor' to allow for resolving potential circular references
+DEBUG - Invoking afterPropertiesSet() on bean with name 'transactionInterceptor'
+DEBUG - Finished creating instance of bean 'transactionInterceptor'
+DEBUG - Eagerly caching bean 'org.springframework.transaction.config.internalTransactionAdvisor' to allow for resolving potential circular references
+DEBUG - Finished creating instance of bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG - Eagerly caching bean 'org.springframework.context.event.internalEventListenerProcessor' to allow for resolving potential circular references
+DEBUG - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG - Finished creating instance of bean 'org.springframework.context.event.internalEventListenerProcessor'
+DEBUG - Creating shared instance of singleton bean 'org.springframework.context.event.internalEventListenerFactory'
+DEBUG - Creating instance of bean 'org.springframework.context.event.internalEventListenerFactory'
+DEBUG - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG - Eagerly caching bean 'org.springframework.context.event.internalEventListenerFactory' to allow for resolving potential circular references
+DEBUG - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG - Finished creating instance of bean 'org.springframework.context.event.internalEventListenerFactory'
+DEBUG - Creating shared instance of singleton bean 'mainConfig'
+DEBUG - Creating instance of bean 'mainConfig'
+DEBUG - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG - Eagerly caching bean 'mainConfig' to allow for resolving potential circular references
+DEBUG - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG - Finished creating instance of bean 'mainConfig'
+DEBUG - Creating shared instance of singleton bean 'DBConfig'
+DEBUG - Creating instance of bean 'DBConfig'
+DEBUG - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG - Registered injected element on class [com.yfs.config.DBConfig]: AutowiredFieldElement for private java.lang.String com.yfs.config.DBConfig.user
+DEBUG - Registered injected element on class [com.yfs.config.DBConfig]: AutowiredFieldElement for private java.lang.String com.yfs.config.DBConfig.password
+DEBUG - Registered injected element on class [com.yfs.config.DBConfig]: AutowiredFieldElement for private java.lang.String com.yfs.config.DBConfig.jdbcUrl
+DEBUG - Registered injected element on class [com.yfs.config.DBConfig]: AutowiredFieldElement for private java.lang.String com.yfs.config.DBConfig.driverClass
+DEBUG - Eagerly caching bean 'DBConfig' to allow for resolving potential circular references
+DEBUG - Processing injected element of bean 'DBConfig': AutowiredFieldElement for private java.lang.String com.yfs.config.DBConfig.user
+DEBUG - Found key 'db.user' in PropertySource 'class path resource [db.properties]' with value of type String
+DEBUG - Processing injected element of bean 'DBConfig': AutowiredFieldElement for private java.lang.String com.yfs.config.DBConfig.password
+DEBUG - Found key 'db.password' in PropertySource 'class path resource [db.properties]' with value of type String
+DEBUG - Processing injected element of bean 'DBConfig': AutowiredFieldElement for private java.lang.String com.yfs.config.DBConfig.jdbcUrl
+DEBUG - Found key 'db.jdbcUrl' in PropertySource 'class path resource [db.properties]' with value of type String
+DEBUG - Processing injected element of bean 'DBConfig': AutowiredFieldElement for private java.lang.String com.yfs.config.DBConfig.driverClass
+DEBUG - Found key 'db.driverclass' in PropertySource 'class path resource [db.properties]' with value of type String
+DEBUG - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG - Finished creating instance of bean 'DBConfig'
+DEBUG - Creating shared instance of singleton bean 'userDao'
+DEBUG - Creating instance of bean 'userDao'
+DEBUG - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG - Registered injected element on class [com.yfs.dao.UserDao]: AutowiredFieldElement for private org.springframework.jdbc.core.JdbcTemplate com.yfs.dao.UserDao.jdbcTemplate
+DEBUG - Eagerly caching bean 'userDao' to allow for resolving potential circular references
+DEBUG - Processing injected element of bean 'userDao': AutowiredFieldElement for private org.springframework.jdbc.core.JdbcTemplate com.yfs.dao.UserDao.jdbcTemplate
+DEBUG - Creating shared instance of singleton bean 'jdbcTemplate'
+DEBUG - Creating instance of bean 'jdbcTemplate'
+DEBUG - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG - Returning cached instance of singleton bean 'mainConfig'
+DEBUG - Returning cached instance of singleton bean 'DBConfig'
+DEBUG - Autowiring by type from bean name 'jdbcTemplate' via factory method to bean named 'DBConfig'
+DEBUG - Creating shared instance of singleton bean 'dataSource'
+DEBUG - Creating instance of bean 'dataSource'
+DEBUG - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG - Returning cached instance of singleton bean 'mainConfig'
+数据源被加载了...
+INFO - MLog clients using log4j logging.
+INFO - Initializing c3p0-0.9.2 [built 09-February-2013 02:13:17 +0000; debug? true; trace: 10]
+DEBUG - MBean: com.mchange.v2.c3p0:type=PooledDataSource,identityToken=1b61eloa3tax8ni132cl1h|5fdcaa40,name=1b61eloa3tax8ni132cl1h|5fdcaa40 registered.
+DEBUG - MBean: com.mchange.v2.c3p0:type=PooledDataSource,identityToken=1b61eloa3tax8ni132cl1h|5fdcaa40,name=1b61eloa3tax8ni132cl1h|5fdcaa40 unregistered, in order to be reregistered after update.
+DEBUG - MBean: com.mchange.v2.c3p0:type=PooledDataSource,identityToken=1b61eloa3tax8ni132cl1h|5fdcaa40,name=1b61eloa3tax8ni132cl1h|5fdcaa40 registered.
+DEBUG - Eagerly caching bean 'dataSource' to allow for resolving potential circular references
+DEBUG - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG - Finished creating instance of bean 'dataSource'
+DEBUG - Eagerly caching bean 'jdbcTemplate' to allow for resolving potential circular references
+DEBUG - Invoking afterPropertiesSet() on bean with name 'jdbcTemplate'
+DEBUG - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG - Finished creating instance of bean 'jdbcTemplate'
+DEBUG - Autowiring by type from bean name 'userDao' to bean named 'jdbcTemplate'
+DEBUG - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG - Finished creating instance of bean 'userDao'
+DEBUG - Creating shared instance of singleton bean 'userService'
+DEBUG - Creating instance of bean 'userService'
+DEBUG - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG - Registered injected element on class [com.yfs.service.UserService]: AutowiredFieldElement for private com.yfs.dao.UserDao com.yfs.service.UserService.userDao
+DEBUG - Eagerly caching bean 'userService' to allow for resolving potential circular references
+DEBUG - Processing injected element of bean 'userService': AutowiredFieldElement for private com.yfs.dao.UserDao com.yfs.service.UserService.userDao
+DEBUG - Returning cached instance of singleton bean 'userDao'
+DEBUG - Autowiring by type from bean name 'userService' to bean named 'userDao'
+DEBUG - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG - Adding transactional method 'com.yfs.service.UserService.insert_parent' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+DEBUG - Creating implicit proxy for bean 'userService' with 0 common interceptors and 1 specific interceptors
+DEBUG - Creating CGLIB proxy: target source is SingletonTargetSource for target object [com.yfs.service.UserService@7dcf94f8]
+DEBUG - Must expose proxy on advised method: public void com.yfs.service.UserService.insert_parent()
+DEBUG - Adding transactional method 'com.yfs.service.UserService.insert_child' with attribute: PROPAGATION_REQUIRES_NEW,ISOLATION_DEFAULT
+DEBUG - Must expose proxy on advised method: public void com.yfs.service.UserService.insert_child()
+DEBUG - Found 'equals' method: public boolean java.lang.Object.equals(java.lang.Object)
+DEBUG - Must expose proxy on advised method: public java.lang.String java.lang.Object.toString()
+DEBUG - Found 'hashCode' method: public native int java.lang.Object.hashCode()
+DEBUG - Must expose proxy on advised method: protected native java.lang.Object java.lang.Object.clone() throws java.lang.CloneNotSupportedException
+DEBUG - Method is declared on Advised interface: public abstract int org.springframework.aop.framework.Advised.indexOf(org.springframework.aop.Advisor)
+DEBUG - Method is declared on Advised interface: public abstract int org.springframework.aop.framework.Advised.indexOf(org.aopalliance.aop.Advice)
+DEBUG - Method is declared on Advised interface: public abstract boolean org.springframework.aop.framework.Advised.isFrozen()
+DEBUG - Method is declared on Advised interface: public abstract void org.springframework.aop.framework.Advised.setTargetSource(org.springframework.aop.TargetSource)
+DEBUG - Method is declared on Advised interface: public abstract org.springframework.aop.TargetSource org.springframework.aop.framework.Advised.getTargetSource()
+DEBUG - Method is declared on Advised interface: public abstract void org.springframework.aop.framework.Advised.setExposeProxy(boolean)
+DEBUG - Method is declared on Advised interface: public abstract void org.springframework.aop.framework.Advised.setPreFiltered(boolean)
+DEBUG - Method is declared on Advised interface: public abstract boolean org.springframework.aop.framework.Advised.isExposeProxy()
+DEBUG - Method is declared on Advised interface: public abstract boolean org.springframework.aop.framework.Advised.isProxyTargetClass()
+DEBUG - Method is declared on Advised interface: public abstract boolean org.springframework.aop.framework.Advised.isPreFiltered()
+DEBUG - Method is declared on Advised interface: public abstract void org.springframework.aop.framework.Advised.addAdvice(org.aopalliance.aop.Advice) throws org.springframework.aop.framework.AopConfigException
+DEBUG - Method is declared on Advised interface: public abstract void org.springframework.aop.framework.Advised.addAdvice(int,org.aopalliance.aop.Advice) throws org.springframework.aop.framework.AopConfigException
+DEBUG - Method is declared on Advised interface: public abstract org.springframework.aop.Advisor[] org.springframework.aop.framework.Advised.getAdvisors()
+DEBUG - Method is declared on Advised interface: public abstract boolean org.springframework.aop.framework.Advised.replaceAdvisor(org.springframework.aop.Advisor,org.springframework.aop.Advisor) throws org.springframework.aop.framework.AopConfigException
+DEBUG - Method is declared on Advised interface: public abstract boolean org.springframework.aop.framework.Advised.removeAdvice(org.aopalliance.aop.Advice)
+DEBUG - Method is declared on Advised interface: public abstract void org.springframework.aop.framework.Advised.addAdvisor(org.springframework.aop.Advisor) throws org.springframework.aop.framework.AopConfigException
+DEBUG - Method is declared on Advised interface: public abstract void org.springframework.aop.framework.Advised.addAdvisor(int,org.springframework.aop.Advisor) throws org.springframework.aop.framework.AopConfigException
+DEBUG - Method is declared on Advised interface: public abstract void org.springframework.aop.framework.Advised.removeAdvisor(int) throws org.springframework.aop.framework.AopConfigException
+DEBUG - Method is declared on Advised interface: public abstract boolean org.springframework.aop.framework.Advised.removeAdvisor(org.springframework.aop.Advisor)
+DEBUG - Method is declared on Advised interface: public abstract java.lang.Class[] org.springframework.aop.framework.Advised.getProxiedInterfaces()
+DEBUG - Method is declared on Advised interface: public abstract java.lang.String org.springframework.aop.framework.Advised.toProxyConfigString()
+DEBUG - Method is declared on Advised interface: public abstract boolean org.springframework.aop.framework.Advised.isInterfaceProxied(java.lang.Class)
+DEBUG - Method is declared on Advised interface: public abstract java.lang.Class org.springframework.aop.TargetClassAware.getTargetClass()
+DEBUG - Finished creating instance of bean 'userService'
+DEBUG - Returning cached instance of singleton bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration'
+DEBUG - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG - Returning cached instance of singleton bean 'transactionAttributeSource'
+DEBUG - Returning cached instance of singleton bean 'transactionInterceptor'
+DEBUG - Creating shared instance of singleton bean 'org.springframework.transaction.config.internalTransactionalEventListenerFactory'
+DEBUG - Creating instance of bean 'org.springframework.transaction.config.internalTransactionalEventListenerFactory'
+DEBUG - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG - Returning cached instance of singleton bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration'
+DEBUG - Eagerly caching bean 'org.springframework.transaction.config.internalTransactionalEventListenerFactory' to allow for resolving potential circular references
+DEBUG - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG - Finished creating instance of bean 'org.springframework.transaction.config.internalTransactionalEventListenerFactory'
+DEBUG - Returning cached instance of singleton bean 'dataSource'
+DEBUG - Returning cached instance of singleton bean 'jdbcTemplate'
+DEBUG - Creating shared instance of singleton bean 'platformTransactionManager'
+DEBUG - Creating instance of bean 'platformTransactionManager'
+DEBUG - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG - Returning cached instance of singleton bean 'mainConfig'
+DEBUG - Returning cached instance of singleton bean 'dataSource'
+DEBUG - Autowiring by type from bean name 'platformTransactionManager' via factory method to bean named 'dataSource'
+DEBUG - Eagerly caching bean 'platformTransactionManager' to allow for resolving potential circular references
+DEBUG - Invoking afterPropertiesSet() on bean with name 'platformTransactionManager'
+DEBUG - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG - Finished creating instance of bean 'platformTransactionManager'
+DEBUG - Returning cached instance of singleton bean 'org.springframework.aop.config.internalAutoProxyCreator'
+DEBUG - Returning cached instance of singleton bean 'org.springframework.context.event.internalEventListenerFactory'
+DEBUG - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionalEventListenerFactory'
+DEBUG - Unable to locate LifecycleProcessor with name 'lifecycleProcessor': using default [org.springframework.context.support.DefaultLifecycleProcessor@707194ba]
+DEBUG - Returning cached instance of singleton bean 'lifecycleProcessor'
+DEBUG - Could not find key 'spring.liveBeansView.mbeanDomain' in any property source
+DEBUG - Returning cached instance of singleton bean 'userService'
+DEBUG - Returning cached instance of singleton bean 'platformTransactionManager'
+DEBUG - Creating new transaction with name [com.yfs.service.UserService.insert_parent]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+INFO - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1b61eloa3tax8ni132cl1h|5fdcaa40, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1b61eloa3tax8ni132cl1h|5fdcaa40, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/yyc?useSSL=false, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 15, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 3, numHelperThreads -> 3, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+DEBUG - incremented pending_acquires: 1
+DEBUG - Starting acquisition series. Incremented pending_acquires [1],  attempts_remaining: 30
+DEBUG - com.mchange.v2.async.ThreadPoolAsynchronousRunner@3c947bc5: Adding task to queue -- com.mchange.v2.resourcepool.BasicResourcePool$ScatteredAcquireTask@609db43b
+DEBUG - incremented pending_acquires: 2
+DEBUG - Starting acquisition series. Incremented pending_acquires [2],  attempts_remaining: 30
+DEBUG - com.mchange.v2.async.ThreadPoolAsynchronousRunner@3c947bc5: Adding task to queue -- com.mchange.v2.resourcepool.BasicResourcePool$ScatteredAcquireTask@55f616cf
+DEBUG - incremented pending_acquires: 3
+DEBUG - Starting acquisition series. Incremented pending_acquires [3],  attempts_remaining: 30
+DEBUG - com.mchange.v2.async.ThreadPoolAsynchronousRunner@3c947bc5: Adding task to queue -- com.mchange.v2.resourcepool.BasicResourcePool$ScatteredAcquireTask@1356d4d4
+DEBUG - com.mchange.v2.resourcepool.BasicResourcePool@c03cf28 config: [start -> 3; min -> 3; max -> 15; inc -> 3; num_acq_attempts -> 30; acq_attempt_delay -> 1000; check_idle_resources_delay -> 0; mox_resource_age -> 0; max_idle_time -> 0; excess_max_idle_time -> 0; destroy_unreturned_resc_time -> 0; expiration_enforcement_delay -> 0; break_on_acquisition_failure -> false; debug_store_checkout_exceptions -> false]
+DEBUG - Created new pool for auth, username (masked): 'ro******'.
+DEBUG - acquire test -- pool size: 0; target_pool_size: 3; desired target? 1
+DEBUG - awaitAvailable(): [unknown]
+DEBUG - trace com.mchange.v2.resourcepool.BasicResourcePool@c03cf28 [managed: 0, unused: 0, excluded: 0]
+DEBUG - com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager@75188895.acquireResource() returning. 
+DEBUG - com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager@75188895.acquireResource() returning. 
+DEBUG - com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager@75188895.acquireResource() returning. 
+DEBUG - trace com.mchange.v2.resourcepool.BasicResourcePool@c03cf28 [managed: 1, unused: 1, excluded: 0]
+DEBUG - decremented pending_acquires: 2
+DEBUG - Acquisition series terminated successfully. Decremented pending_acquires [2],  attempts_remaining: 30
+DEBUG - trace com.mchange.v2.resourcepool.BasicResourcePool@c03cf28 [managed: 1, unused: 0, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@fd4f14a)
+DEBUG - Acquired Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@53aad5d5] for JDBC transaction
+DEBUG - trace com.mchange.v2.resourcepool.BasicResourcePool@c03cf28 [managed: 2, unused: 1, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@fd4f14a)
+DEBUG - decremented pending_acquires: 1
+DEBUG - Acquisition series terminated successfully. Decremented pending_acquires [1],  attempts_remaining: 30
+DEBUG - trace com.mchange.v2.resourcepool.BasicResourcePool@c03cf28 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@fd4f14a)
+DEBUG - decremented pending_acquires: 0
+DEBUG - Acquisition series terminated successfully. Decremented pending_acquires [0],  attempts_remaining: 30
+DEBUG - Switching JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@53aad5d5] to manual commit
+DEBUG - Executing prepared SQL update
+DEBUG - Executing prepared SQL statement [insert into `tbl_user`(username, age) values(?, ?)]
+DEBUG - SQL update affected 1 rows
+DEBUG - Suspending current transaction, creating new transaction with name [com.yfs.service.UserService.insert_child]
+DEBUG - trace com.mchange.v2.resourcepool.BasicResourcePool@c03cf28 [managed: 3, unused: 1, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@fd4f14a)
+DEBUG - Acquired Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@747edf66] for JDBC transaction
+DEBUG - Switching JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@747edf66] to manual commit
+DEBUG - Executing prepared SQL update
+DEBUG - Executing prepared SQL statement [insert into `tbl_user`(username, age) values(?, ?)]
+DEBUG - SQL update affected 1 rows
+DEBUG - Initiating transaction rollback
+DEBUG - Rolling back JDBC transaction on Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@747edf66]
+DEBUG - Releasing JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@747edf66] after transaction
+DEBUG - com.mchange.v2.async.ThreadPoolAsynchronousRunner@3c947bc5: Adding task to queue -- com.mchange.v2.resourcepool.BasicResourcePool$1RefurbishCheckinResourceTask@11bd0f3b
+DEBUG - trace com.mchange.v2.resourcepool.BasicResourcePool@c03cf28 [managed: 3, unused: 1, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@fd4f14a)
+DEBUG - Resuming suspended transaction after completion of inner transaction
+java.lang.ArithmeticException: / by zero
+DEBUG - Initiating transaction commit
+DEBUG - Committing JDBC transaction on Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@53aad5d5]
+	at com.yfs.service.UserService.insert_child(UserService.java:43)
+	at com.yfs.service.UserService$$FastClassBySpringCGLIB$$c7fafa3c.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:738)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:283)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:673)
+	at com.yfs.service.UserService$$EnhancerBySpringCGLIB$$432abf88.insert_child(<generated>)
+	at com.yfs.service.UserService.insert_parent(UserService.java:33)
+	at com.yfs.service.UserService$$FastClassBySpringCGLIB$$c7fafa3c.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:738)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:283)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:673)
+	at com.yfs.service.UserService$$EnhancerBySpringCGLIB$$432abf88.insert_parent(<generated>)
+	at com.yfs.App.main(App.java:14)
+DEBUG - Releasing JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@53aad5d5] after transaction
+DEBUG - com.mchange.v2.async.ThreadPoolAsynchronousRunner@3c947bc5: Adding task to queue -- com.mchange.v2.resourcepool.BasicResourcePool$1RefurbishCheckinResourceTask@1eb5174b
+DEBUG - trace com.mchange.v2.resourcepool.BasicResourcePool@c03cf28 [managed: 3, unused: 2, excluded: 0] (e.g. com.mchange.v2.c3p0.impl.NewPooledConnection@fd4f14a)
+INFO - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@2077d4de: startup date [Tue Jun 18 16:03:14 CST 2019]; root of context hierarchy
+DEBUG - Returning cached instance of singleton bean 'lifecycleProcessor'
+DEBUG - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@3796751b: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.event.internalEventListenerProcessor,org.springframework.context.event.internalEventListenerFactory,mainConfig,DBConfig,userDao,userService,org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration,org.springframework.transaction.config.internalTransactionAdvisor,transactionAttributeSource,transactionInterceptor,org.springframework.transaction.config.internalTransactionalEventListenerFactory,dataSource,jdbcTemplate,platformTransactionManager,org.springframework.aop.config.internalAutoProxyCreator]; root of factory hierarchy
+DEBUG - Retrieved dependent beans for bean 'dataSource': [jdbcTemplate, platformTransactionManager]
+DEBUG - Retrieved dependent beans for bean 'jdbcTemplate': [userDao]
+DEBUG - Retrieved dependent beans for bean 'userDao': [userService]
+DEBUG - Invoking destroy method 'close' on bean with name 'dataSource'
+DEBUG - The mbean com.mchange.v2.c3p0:type=PooledDataSource,identityToken=1b61eloa3tax8ni132cl1h|5fdcaa40 was not found in the registry, so could not be unregistered.
+DEBUG - C3P0Registry mbean unregistered.
+DEBUG - Preparing to destroy resource: com.mchange.v2.c3p0.impl.NewPooledConnection@17180b9e
+DEBUG - com.mchange.v2.c3p0.ComboPooledDataSource@5fdcaa40 has been closed. 
+java.lang.Exception: DEBUG STACK TRACE for PoolBackedDataSource.close().
+	at com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource.close(AbstractPoolBackedDataSource.java:465)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.invokeCustomDestroyMethod(DisposableBeanAdapter.java:364)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:287)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:578)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:554)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:961)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:523)
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.destroySingletons(FactoryBeanRegistrySupport.java:230)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:968)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1030)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1006)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:958)
+	at com.yfs.App.main(App.java:15)
+DEBUG - Preparing to destroy PooledConnection: com.mchange.v2.c3p0.impl.NewPooledConnection@17180b9e
+DEBUG - com.mchange.v2.c3p0.impl.NewPooledConnection@17180b9e closed by a client.
+java.lang.Exception: DEBUG -- CLOSE BY CLIENT STACK TRACE
+	at com.mchange.v2.c3p0.impl.NewPooledConnection.close(NewPooledConnection.java:634)
+	at com.mchange.v2.c3p0.impl.NewPooledConnection.closeMaybeCheckedOut(NewPooledConnection.java:247)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.destroyResource(C3P0PooledConnectionPool.java:607)
+	at com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask.run(BasicResourcePool.java:1012)
+	at com.mchange.v2.resourcepool.BasicResourcePool.destroyResource(BasicResourcePool.java:1037)
+	at com.mchange.v2.resourcepool.BasicResourcePool.destroyResource(BasicResourcePool.java:998)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$100(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$5.run(BasicResourcePool.java:1248)
+DEBUG - Successfully destroyed PooledConnection: com.mchange.v2.c3p0.impl.NewPooledConnection@17180b9e
+DEBUG - Successfully destroyed resource: com.mchange.v2.c3p0.impl.NewPooledConnection@17180b9e
+DEBUG - Preparing to destroy resource: com.mchange.v2.c3p0.impl.NewPooledConnection@fd4f14a
+DEBUG - Preparing to destroy PooledConnection: com.mchange.v2.c3p0.impl.NewPooledConnection@fd4f14a
+DEBUG - com.mchange.v2.c3p0.impl.NewPooledConnection@fd4f14a closed by a client.
+java.lang.Exception: DEBUG -- CLOSE BY CLIENT STACK TRACE
+	at com.mchange.v2.c3p0.impl.NewPooledConnection.close(NewPooledConnection.java:634)
+	at com.mchange.v2.c3p0.impl.NewPooledConnection.closeMaybeCheckedOut(NewPooledConnection.java:247)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.destroyResource(C3P0PooledConnectionPool.java:607)
+	at com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask.run(BasicResourcePool.java:1012)
+	at com.mchange.v2.resourcepool.BasicResourcePool.destroyResource(BasicResourcePool.java:1037)
+	at com.mchange.v2.resourcepool.BasicResourcePool.destroyResource(BasicResourcePool.java:998)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$100(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$5.run(BasicResourcePool.java:1248)
+DEBUG - Successfully destroyed PooledConnection: com.mchange.v2.c3p0.impl.NewPooledConnection@fd4f14a
+DEBUG - Successfully destroyed resource: com.mchange.v2.c3p0.impl.NewPooledConnection@fd4f14a
+DEBUG - Preparing to destroy resource: com.mchange.v2.c3p0.impl.NewPooledConnection@347336fd
+DEBUG - Preparing to destroy PooledConnection: com.mchange.v2.c3p0.impl.NewPooledConnection@347336fd
+DEBUG - com.mchange.v2.c3p0.impl.NewPooledConnection@347336fd closed by a client.
+java.lang.Exception: DEBUG -- CLOSE BY CLIENT STACK TRACE
+	at com.mchange.v2.c3p0.impl.NewPooledConnection.close(NewPooledConnection.java:634)
+	at com.mchange.v2.c3p0.impl.NewPooledConnection.closeMaybeCheckedOut(NewPooledConnection.java:247)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.destroyResource(C3P0PooledConnectionPool.java:607)
+	at com.mchange.v2.resourcepool.BasicResourcePool$1DestroyResourceTask.run(BasicResourcePool.java:1012)
+	at com.mchange.v2.resourcepool.BasicResourcePool.destroyResource(BasicResourcePool.java:1037)
+	at com.mchange.v2.resourcepool.BasicResourcePool.destroyResource(BasicResourcePool.java:998)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$100(BasicResourcePool.java:32)
+	at com.mchange.v2.resourcepool.BasicResourcePool$5.run(BasicResourcePool.java:1248)
+DEBUG - Successfully destroyed PooledConnection: com.mchange.v2.c3p0.impl.NewPooledConnection@347336fd
+DEBUG - Successfully destroyed resource: com.mchange.v2.c3p0.impl.NewPooledConnection@347336fd

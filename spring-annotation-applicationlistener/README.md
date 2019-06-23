@@ -1,0 +1,2 @@
+讲解Spring中的 applicationlistener扩展点
+是Spring为我们提供的基于事件驱动开发的功能. 它会监听容器中发布的事件(实现了applicationevent接口)，只要事件发生，就会触发监听器的回调来完成我们事件驱动开发

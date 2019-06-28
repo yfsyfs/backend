@@ -62,7 +62,7 @@ public class WeakRef {
 
 					if (userWeakReference != null) {
 
-						System.out.println("user id " + userWeakReference.uid + " is deleted...");
+						System.out.println("user id " + userWeakReference.uid + " is deleted..."); // 不要觉得奇怪，这里打印的uid并不是被gc掉的对象的,而是弱引用对象自身中维护的
 
 					}
 

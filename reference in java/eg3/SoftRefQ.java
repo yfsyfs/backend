@@ -89,7 +89,7 @@ public class SoftRefQ {
 					// 如果移除成功
 					if (userSoftReference != null) {
 
-						System.out.println("user id " + userSoftReference.uid + " is deleted...");
+						System.out.println("user id " + userSoftReference.uid + " is deleted..."); // 不要觉得奇怪，这里打印的uid并不是被gc掉的对象的,而是软引用对象自身中维护的
 
 					}
 

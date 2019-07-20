@@ -30,7 +30,7 @@ public class Lexer {
 	 */
 	public void runLexer() {
 		while (!match(EOF)) { // 只要当前不是EOF
-			System.out.println("Token: " + token() + ",Symbol: " + text);
+			System.out.println("Token: " + token() + ",Symbol: " + text); // 按照【标签:具体字符串】进行打印
 			advance(); // 读取下一个字符并进行分析
 		}
 	}

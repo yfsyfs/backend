@@ -30,7 +30,7 @@
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
 			<scope>runtime</scope>
-			<version>9.4-1201-jdbc4</version>
+			<version>42.2.25</version>
 		</dependency>
 		<dependency>
 			<groupId>org.projectlombok</groupId>

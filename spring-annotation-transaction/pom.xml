@@ -32,7 +32,7 @@
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
-			<version>5.1.44</version>
+			<version>8.0.28</version>
 		</dependency>
 		<!-- spring对数据库的操作（spring-jdbc包）以及事务控制（spring-tx包）的简化, 如果你使用hibernate的话，还可以导入spring-orm模块，用以支持各种版本的hibernate，这里只导入了spring-jdbc的话，就只能使用jdbcTemplate来操作数据库了,jdbcTemplate是spring提供的用以简化数据库操作的工具 -->
 		<dependency>
